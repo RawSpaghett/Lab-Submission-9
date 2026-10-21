@@ -16,7 +16,8 @@ public class TargetBase : MonoBehaviour
         sprite = Sprite;
         if (!this.TryGetComponent(out SpriteRenderer renderer))
         {
-            renderer.sprite = sprite;
+            renderer = this.gameObject.AddComponent<SpriteRenderer>();
         }
+        renderer.sprite = sprite;
     }
 }
