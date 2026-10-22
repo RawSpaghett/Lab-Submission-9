@@ -20,12 +20,17 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            bulletLogic.Release(this.gameObject);
+            HitEnemy(this.gameObject);
         }
 
         if (collision.gameObject.name == "TopOfScreen")
         {
-            bulletLogic.Release(this.gameObject);
+            HitScreen(this.gameObject);
         }
     }
+
+    void HitEnemy(GameObject bullet) { bulletLogic.Release(bullet); }
+
+
+    void HitScreen(GameObject bullet) { bulletLogic.Release(bullet); }
 }
