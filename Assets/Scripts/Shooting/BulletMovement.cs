@@ -20,6 +20,8 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            EventBus.OnTargetHit(collision.gameObject.GetComponent<TargetBase>());
+            Destroy(collision.gameObject);
             HitEnemy(this.gameObject);
         }
 
@@ -29,7 +31,10 @@ public class BulletMovement : MonoBehaviour
         }
     }
 
-    void HitEnemy(GameObject bullet) { bulletLogic.Release(bullet); }
+    void HitEnemy(GameObject bullet)
+    {
+        bulletLogic.Release(bullet); 
+    }
 
 
     void HitScreen(GameObject bullet) { bulletLogic.Release(bullet); }
