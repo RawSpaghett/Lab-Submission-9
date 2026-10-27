@@ -7,6 +7,7 @@ public class PlayerInputScript : MonoBehaviour
 {
     public float moveDirection;
     public bool shoot;
+    
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
@@ -18,4 +19,9 @@ public class PlayerInputScript : MonoBehaviour
         if (context.performed) { shoot = true; }
         if (context.canceled) { shoot = false; }
     }
+    
+    public void OnSaveBinaryInput(InputAction.CallbackContext context)
+    {}
+    public void OnLoadBinaryInput(InputAction.CallbackContext context)
+    {}
 }
