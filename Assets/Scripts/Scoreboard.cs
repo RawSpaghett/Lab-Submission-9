@@ -42,12 +42,12 @@ public class Scoreboard : MonoBehaviour, ISaveable
         if (saveData is ScoreboardData data)
         {
             this.score = data.Score;
-            UpdateScore(null);
+            text.text = $"Score: {score.ToString()}";
         }
     }
-    
+
     [System.Serializable]
-    private struct ScoreboardData
+    public struct ScoreboardData
     {
         public float Score;
     }

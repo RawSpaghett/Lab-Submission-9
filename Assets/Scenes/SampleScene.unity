@@ -736,6 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9d919bbcde84d448d904dc22a67d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scoreboard
+  score: 0
 --- !u!1 &1664618589
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +977,38 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1989020176}
+        m_TargetAssemblyTypeName: BinaryScoreSaver, Assembly-CSharp
+        m_MethodName: SaveScoreData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a7d8a15b-5eac-414a-b385-c507d67ce392
+    m_ActionName: 'Player/Save[/Keyboard/s]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1989020176}
+        m_TargetAssemblyTypeName: BinaryScoreSaver, Assembly-CSharp
+        m_MethodName: LoadScoreData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: db362f68-215c-4b2f-a4eb-75bfe914ff84
+    m_ActionName: 'Player/Load[/Keyboard/l]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: 
@@ -993,6 +1026,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d16d98aba25f84a97818da5665546f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletLogic
+--- !u!1 &1989020175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1989020177}
+  - component: {fileID: 1989020176}
+  m_Layer: 0
+  m_Name: Save/Load
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1989020176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989020175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a55f16b8c29f4af99552c288eeb3376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BinaryScoreSaver
+--- !u!4 &1989020177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989020175}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 897.1188, y: 0.00002, z: -639.59283}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6453684895372860278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1067,3 +1144,4 @@ SceneRoots:
   - {fileID: 130234356}
   - {fileID: 90686916}
   - {fileID: 762093240}
+  - {fileID: 1989020177}
